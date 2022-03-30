@@ -1,1 +1,113 @@
 home
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bai Tap 13</title>
+    <link rel="stylesheet" href="baiTapHTML13.css">
+</head>
+
+<body>
+    <h2>Đăng ký du lịch</h2>
+
+    <table>
+        <tbody>
+            <tr>
+                <td>Họ và tên</td>
+                <td><input type="text"></td>
+            </tr>
+
+            <tr>
+                <td>Địa chỉ</td>
+                <td><input type="text"></td>
+            </tr>
+
+            <tr>
+                <td>Điện thoại</td>
+                <td><input type="text"></td>
+            </tr>
+
+            <tr>
+                <td>Khách Việt Nam</td>
+                <td><input type="checkbox" checked></td>
+            </tr>
+
+            <tr>
+                <td>Chọn Tour</td>
+                <td>
+                    <select name="tours" id="tours">
+                        <optgroup label="Miền Bắc">
+                            <option value="Hà Nội - Hạ Long - SaPa">Hà Nội - Hạ Long - SaPa</option>
+                            <option value="Hà Nội - Chùa Hương - Ninh Bình">Hà Nội - Chùa Hương - Ninh Bình</option>
+                            <option value="Hà Nội - Cát Bà - Tuần Châu">Hà Nội - Cát Bà - Tuần Châu</option>
+                        </optgroup>
+
+                        <optgroup label="Miền Trung">
+                            <option value="Huế - Bạch Mã - Đà Nẵng">Huế - Bạch Mã - Đà Nẵng</option>
+                            <option value="Nha Trang - Đà Lạt">Nha Trang - Đà Lạt</option>
+                            <option value="Buôn Mê Thuột - Gia Lai - Kon Tum">Buôn Mê Thuột - Gia Lai - Kon Tum</option>
+                        </optgroup>
+
+                        <optgroup label="Miền Nam">
+                            <option value="TP.HCM - Cần Thơ - Cà Mau">TP.HCM - Cần Thơ - Cà Mau</option>
+                            <option value="TP.HCM - Mỹ Tho">TP.HCM - Mỹ Tho</option>
+                        </optgroup>
+                    </select>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Phương tiện</td>
+                <td>
+                    <input type="radio" name="traffic" value="Máy Bay">Máy Bay
+                    <input type="radio" name="traffic" value="Xe ô tô" checked>Xe ô tô
+            </tr>
+
+            <tr>
+                <td colspan="2">
+                    <fieldset>
+                        <legend>Số lượng đoàn khách</legend>
+                        <div id="container">
+                            <label for="adult">Người lớn</label>
+                            <input type="number" id="adult" name="adult">
+                            <label for="child">Trẻ em</label>
+                            <input type="number" id="child" name="child">
+                        </div>
+                    </fieldset>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Ghi chú thêm</td>
+                <td><textarea name="note" id="note" cols="25" rows="2"></textarea></td>
+            </tr>
+
+        </tbody>
+        <tr>
+            <td colspan="2">
+                <input id="btn" type="button" value="Đồng ý" onclick="return showInfor()">
+            </td>
+        </tr>
+
+        <tfoot>
+            <tr>
+                <td colspan="2">
+                    <div id="label"></div>
+                </td>
+            </tr>
+        </tfoot>
+    </table>
+
+    <script>
+        function showInfor() {
+            document.getElementById("label").innerText = "Bạn đã đăng ký thành công!";
+            document.getElementById("label").style.textAlign = "center";
+            return false;
+        }
+    </script>
+</body>
+
+</html>
